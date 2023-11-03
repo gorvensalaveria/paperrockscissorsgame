@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon png -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- og tags -->
+    <meta
+      property="og:title"
+      content="Frontend Mentor | Rock, Paper, Scissors game"
+    />
+    <meta
+      property="og:description"
+      content="Frontend Mentor Challenge: Rock, Paper, Scissors game"
+    />
+
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/franexmo81/rock-paper-scissors-game/main/screenshot.png"
+    />
+    <meta
+      property="og:url"
+      content="https://franexmo81.github.io/rock-paper-scissors-game/"
+    />
+    <meta property="og:site_name" content="Rock, Paper, Scissors" />
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Custom attribution stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://franexmo81.github.io/attribution-footer/attribution-style.css"
+    />
+
+    <!-- title of site -->
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="game-name-container">
+        <img
+          class="game-name"
+          src="./images/logo-bonus.svg"
+          alt="Rock Paper Scissors Lizard Spock"
+        />
+      </div>
+      <div class="score">
+        <p class="score__title">Score</p>
+        <div class="score-container">
+          <p class="score__value">0</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="panel" class="panel">
+      <section class="players-container">
+        <img class="triangle" src="./images/bg-triangle.svg" alt="Triangle" />
+        <img class="pentagon" src="./images/bg-pentagon.svg" alt="Pentagon" />
+
+        <div class="player player--user">
+          <span class="picked picked--user">You picked</span>
+        </div>
+
+        <div class="player player--house">
+          <span class="picked picked--house">The house picked</span>
+        </div>
+      </section>
+      <section class="game-result">
+        <p id="result" class="game-result__message"></p>
+        <button id="playAgain" class="button button--play">Play again</button>
+      </section>
+    </main>
+
+    <section class="modal">
+      <div class="modal__container">
+        <div class="modal__top">
+          <span>Rules</span>
+          <svg
+            id="closeRulesTop"
+            class="modal__close modal__close--top"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+          >
+            <path
+              fill="#3B4262"
+              fill-rule="evenodd"
+              d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+              opacity=".25"
+            />
+          </svg>
+        </div>
+        <img
+          class="modal__rules modal__rules--original"
+          src="./images/image-rules.svg"
+          alt="game rules"
+        />
+        <img
+          class="modal__rules modal__rules--bonus"
+          src="./images/image-rules-bonus.svg"
+          alt="game rules"
+        />
+        <svg
+          id="closeRulesBottom"
+          class="modal__close modal__close--bottom"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+        >
+          <path
+            fill="#3B4262"
+            fill-rule="evenodd"
+            d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+            opacity=".25"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <div class="game-mode">
+      <h2 class="game-mode__title">Game mode</h2>
+      <label id="toggle" class="toggle">
+        <input type="checkbox" />
+        <span class="toggle__slider">
+          <span class="toggle__label toggle__label--original">Original</span>
+          <span class="toggle__label toggle__label--bonus">Bonus</span>
+        </span>
+      </label>
+    </div>
+
+    <button id="rules" class="button button--rules">Rules</button>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
